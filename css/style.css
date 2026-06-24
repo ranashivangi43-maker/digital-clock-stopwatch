@@ -3,7 +3,17 @@
     padding:0;
     box-sizing:border-box;
 }
+:root{
+    --bg-primary:#0f172a;
+    --bg-secondary:#1e293b;
+    --card-bg:rgba(255,255,255,0.08);
+    --panel-bg:rgba(15,23,42,0.55);
 
+    --text-primary:#ffffff;
+    --text-secondary:#cbd5e1;
+
+    --accent:#38bdf8;
+}
 body{
     min-height:100vh;
     display:flex;
@@ -13,20 +23,20 @@ body{
 
     font-family:Segoe UI, sans-serif;
 
-    background:linear-gradient(
-        135deg,
-        #0f172a,
-        #1e293b
-    );
+   background:linear-gradient(
+135deg,
+var(--bg-primary),
+var(--bg-secondary)
+);
 
-    color:white;
+    color:var(--text-primary);
 }
 
 .app{
     width:100%;
     max-width:900px;
 
-    background:rgba(255,255,255,0.08);
+      background:var(--card-bg);
 
     backdrop-filter:blur(15px);
 
@@ -52,27 +62,10 @@ body{
 }
 
 .app-header p{
-    color:#cbd5e1;
+   color:var(--text-secondary);
     font-size:16px;
 }
 
-.theme-btn{
-    position:absolute;
-    top:0;
-    right:0;
-
-    width:42px;
-    height:42px;
-
-    border:none;
-    border-radius:50%;
-
-    background:rgba(255,255,255,0.12);
-    color:white;
-
-    font-size:20px;
-    cursor:pointer;
-}
 
 .tabs{
     display:flex;
@@ -87,7 +80,7 @@ body{
     border-radius:999px;
 
     background:rgba(255,255,255,0.1);
-    color:#cbd5e1;
+    color:var(--text-secondary);
 
     font-size:15px;
     font-weight:600;
@@ -95,6 +88,180 @@ body{
 }
 
 .tab-btn.active{
+     background:var(--accent);
+    color:#020617;
+}
+.panel{
+    display:none;
+    text-align:center;
+
+    max-width:650px;
+    margin:0 auto;
+    padding:35px 25px;
+
+  background:var(--panel-bg);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:22px;
+}
+
+.panel.active{
+    display:block;
+}
+
+.label{
+    color:#94a3b8;
+    font-size:15px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.clock-display,
+.stopwatch-display{
+    font-size:72px;
+    font-weight:700;
+    letter-spacing:4px;
+    margin-bottom:16px;
+}
+
+#ampm{
+    font-size:24px;
+      color:var(--accent);
+    margin-left:8px;
+}
+
+.date-text{
+     color:var(--text-secondary);
+    font-size:18px;
+    margin-bottom:22px;
+}
+button{
+    font-family:inherit;
+}
+
+.primary-btn,
+.secondary-btn,
+.warning-btn,
+.danger-btn{
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+
+    transition:0.25s ease;
+}
+
+.primary-btn{
+    background:#22c55e;
+    color:white;
+}
+
+.secondary-btn{
     background:#38bdf8;
     color:#020617;
+}
+
+.warning-btn{
+    background:#f59e0b;
+    color:white;
+}
+
+.danger-btn{
+    background:#ef4444;
+    color:white;
+}
+
+.controls{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+.laps{
+    margin-top:25px;
+}
+
+.laps h2{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+#lapList{
+    list-style:none;
+    padding:0;
+    margin:0 auto;
+
+    max-width:360px;
+    max-height:150px;
+    overflow-y:auto;
+}
+
+#lapList li{
+    display:flex;
+    justify-content:space-between;
+
+    padding:10px 14px;
+    margin-bottom:8px;
+
+    background:rgba(255,255,255,0.08);
+    border-radius:10px;
+
+    color:#e2e8f0;
+    font-size:15px;
+}
+
+@media (max-width: 600px){
+    .app{
+        padding:22px 16px;
+    }
+
+    .app-header h1{
+        font-size:34px;
+    }
+
+    .app-header p{
+        font-size:14px;
+    }
+
+    .clock-display,
+    .stopwatch-display{
+        font-size:42px;
+        letter-spacing:2px;
+    }
+
+    #ampm{
+        font-size:18px;
+    }
+
+    .tabs{
+        gap:8px;
+    }
+
+    .tab-btn{
+        padding:10px 20px;
+    }
+
+    .panel{
+        padding:28px 16px;
+    }
+
+    .controls{
+        gap:10px;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .warning-btn,
+    .danger-btn{
+        padding:10px 16px;
+        font-size:14px;
+    }
 }
