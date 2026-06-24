@@ -1,11 +1,11 @@
-⏱️ TimeFlow — Digital Clock & Stopwatch
+#⏱️ TimeFlow — Digital Clock & Stopwatch
 
 A clean, minimal web app combining a real-time digital clock and a fully functional stopwatch — built with vanilla HTML, CSS, and JavaScript.
 
 
-Features
+##Features
 
-Digital Clock
+###Digital Clock
 
 
 Live real-time clock that updates every second
@@ -13,7 +13,7 @@ Toggle between 12-hour and 24-hour format
 Displays current date with day, month, and year
 
 
-Stopwatch
+###Stopwatch
 
 
 Start, Pause, and Reset controls
@@ -22,7 +22,7 @@ Clean tabbed interface to switch between clock and stopwatch
 
 
 
-Tech Stack
+##Tech Stack
 
 
 HTML5
@@ -44,5 +44,5 @@ DIGITAL CLOCK/
 └── index.html
 ```
 
-Live Demo
+##Live Demo
 🔗 https://ranashivangi43-maker.github.io/digital-clock-stopwatch/
