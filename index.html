@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeFlow | Digital Clock & Stopwatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="app-header">
+            <h1>TimeFlow</h1>
+            <p>Digital clock and stopwatch in one clean app.</p>
+
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="clock">Clock</button>
+            <button class="tab-btn" data-tab="stopwatch">Stopwatch</button>
+        </nav>
+
+        <main>
+            <section id="clock" class="panel active">
+                <p class="label">Current Time</p>
+
+                <div class="clock-display">
+                    <span id="clockTime">00:00:00</span>
+                    <span id="ampm">AM</span>
+                </div>
+
+                <p id="dateText" class="date-text">Loading date...</p>
+
+                <button id="formatToggle" class="secondary-btn">
+                    Switch to 12 Hour
+                </button>
+            </section>
+
+            <section id="stopwatch" class="panel">
+                <p class="label">Stopwatch</p>
+
+                <div class="stopwatch-display" id="stopwatchTime">
+                    00:00:00
+                </div>
+
+                <div class="controls">
+                    <button id="startBtn" class="primary-btn">Start</button>
+                    <button id="pauseBtn" class="warning-btn">Pause</button>
+                    <button id="resetBtn" class="danger-btn">Reset</button>
+                    <button id="lapBtn" class="secondary-btn">Lap</button>
+                </div>
+
+                <div class="laps">
+                    <h2>Lap Times</h2>
+                    <ul id="lapList"></ul>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
