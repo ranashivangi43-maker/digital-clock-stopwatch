@@ -30,9 +30,9 @@ CSS3 (CSS Variables, Flexbox, Backdrop Filter)
 Vanilla JavaScript (DOM Manipulation, setInterval)
 
 
+## Project Structure
 
-Project Structure
-
+```text
 DIGITAL CLOCK/
 ├── assets/
 │   └── images/
@@ -40,7 +40,9 @@ DIGITAL CLOCK/
 │   └── style.css
 ├── js/
 │   └── app.js
+├── README.md
 └── index.html
+```
 
 Live Demo
 🔗 https://ranashivangi43-maker.github.io/digital-clock-stopwatch/
